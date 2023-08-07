@@ -1,4 +1,4 @@
-export default function SimpleInput() {
+export default function SimpleInput(props) {
   return (
     <form>
       <div className="form-control">
