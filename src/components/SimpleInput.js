@@ -20,7 +20,7 @@ export default function SimpleInput(props) {
 
   let formIsValid = false;
 
-  if (enteredNameIsValid) {
+  if (enteredNameIsValid && enteredEmailIsValid) {
     formIsValid = true;
   }
 
@@ -35,7 +35,7 @@ export default function SimpleInput(props) {
   const formSubmissionHandler = (event) => {
     event.preventDefault();
 
-    if (!enteredNameIsValid || !enteredEmailIsValid) {
+    if (!enteredNameIsValid) {
       return;
     }
 
@@ -73,7 +73,7 @@ export default function SimpleInput(props) {
         )}
       </div>
       <div className={emailInputClasses}>
-        <label htmlFor="email">E-Mail</label>
+        <label htmlFor="email">Your E-Mail</label>
         <input
           type="email"
           id="email"
